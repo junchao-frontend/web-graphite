@@ -3,9 +3,14 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 const routes = [
     {
-        path: '/',
+        path: '/graphite',
         name: 'graphite',
         component: ()=>import('../views/graphite.vue')
+    },
+    {
+        path: '/',
+        name: 'photo',
+        component: ()=>import('../views/photo.vue')
     }
 ]
 

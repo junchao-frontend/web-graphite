@@ -1,0 +1,84 @@
+{
+    "data": [
+        {
+            "id": "html",
+            "longitude": 0.051566312697467705,
+            "latitude": -0.1099123315353121,
+            "html": "<div class='pin'><div class='text'>#1</div></div><div class='pulse'></div>",
+            "width": 32,
+            "height": 32,
+            "anchor": "bottom center",
+            "tooltip": "PM扬尘仪"
+        },
+        {
+            "id": "html",
+            "longitude": 6.1499380316414936,
+            "latitude": -0.1384418182379843,
+            "html": "<div class='pin'><div class='text'>#1</div></div><div class='pulse'></div>",
+            "width": 32,
+            "height": 32,
+            "anchor": "bottom center",
+            "tooltip": "无组织VOCs"
+        },
+        {
+            "id": "html",
+            "longitude": 0.04224938832835294,
+            "latitude": -0.1412893819983141,
+            "html": "<div class='pin'><div class='text'>#1</div></div><div class='pulse'></div>",
+            "width": 32,
+            "height": 32,
+            "anchor": "bottom center",
+            "tooltip": "有组织VOCs"
+        },
+        {
+            "id": "html",
+            "longitude": 6.047462209861827,
+            "latitude": -0.3089011327807749,
+            "html": "<div class='pin'><div class='text'>#1</div></div><div class='pulse'></div>",
+            "width": 32,
+            "height": 32,
+            "anchor": "bottom center",
+            "tooltip": "CEMS"
+        },
+        {
+            "id": "html",
+            "longitude": 6.015142458534825,
+            "latitude": -0.33140880893830915,
+            "html": "<div class='pin'><div class='text'>#1</div></div><div class='pulse'></div>",
+            "width": 32,
+            "height": 32,
+            "anchor": "bottom center",
+            "tooltip": "PM扬尘仪"
+        },
+        {
+            "id": "html",
+            "longitude": 5.7252865521698775,
+            "latitude": -0.4710962437277053,
+            "html": "<div class='pin'><div class='text'>#1</div></div><div class='pulse'></div>",
+            "width": 32,
+            "height": 32,
+            "anchor": "bottom center",
+            "tooltip": "PM扬尘仪"
+        },
+        {
+            "id": "html",
+            "longitude": 0.5019453053703459,
+            "latitude": -0.1395886141894247,
+            "html": "<div class='pin'><div class='text'>#1</div></div><div class='pulse'></div>",
+            "width": 32,
+            "height": 32,
+            "anchor": "bottom center",
+            "tooltip": "PM扬尘仪"
+        },
+        {
+            "id": "html",
+            "longitude": 0.6167093287226815,
+            "latitude": -0.28475783293140733,
+            "html": "<div class='pin'><div class='text'>#1</div></div><div class='pulse'></div>",
+            "width": 32,
+            "height": 32,
+            "anchor": "bottom center",
+            "tooltip": "PM扬尘仪"
+        }
+    ]
+}

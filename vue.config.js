@@ -3,7 +3,7 @@
 // const isProduction = process.env.NODE_ENV === 'production'
 module.exports = {
     devServer: {
-      port: 5000,
+      port: 5050,
       open: true
     },
     configureWebpack: {
