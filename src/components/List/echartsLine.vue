@@ -1,208 +1,105 @@
 <template>
-  <div style="height: 100%; width: 100%"
-       class="lines">
-    <div style="height: 7%">
-      <p style="
-          color: white;
-          text-align: center;
-          font-size: 14px;
-          color: white;
-          text-shadow: 0 0 8px rgb(0, 233, 249);
-        ">
-        近30天在校人数统计
-      </p>
-    </div>
-    <div id="Line"
-         style="height: 93%; width: 100%"></div>
+  <div class="line">
+    <div id="cols2">VOC数据趋势</div>
+    <div class="line" ref="line"></div>
   </div>
 </template>
 
 <script>
+import chalk1 from "../chalk/chalk1.json";
 import echarts from "echarts";
 export default {
-  data () {
+  name: "",
+  components: {},
+  props: {},
+  data() {
     return {};
   },
-  mounted () {
-    this.initLIne();
+  computed: {},
+  watch: {},
+  created() {},
+  mounted() {
+    this.$nextTick(this.initDialogs());
   },
   methods: {
-    initLIne () {
-      let myChart = this.$echarts.init(document.getElementById("Line")); //初始化实例
-      var data = {
-        city: [
-          "学院",
-          "食堂",
-          "公寓",
-          "公共部分",
-          "后勤",
+    initDialogs() {
+      let obj = chalk1;
+      echarts.registerTheme("chalk1", obj);
+      let myChart = this.$echarts.init(this.$refs.line, "chalk1"); //初始化实例
 
-        ],
-        num: ["40", "60", "32", "85", "50", "40", "20", "50"],
-      };
       let option = {
-        // backgroundColor: "#0e1c47",
         tooltip: {
           trigger: "axis",
-          axisPointer: {
-            lineStyle: {
-              color: {
-                type: "linear",
-                x: 0,
-                y: 0,
-                x2: 0,
-                y2: 1,
-                colorStops: [
-                  {
-                    offset: 0,
-                    color: "rgba(255,255,255,0)", // 0% 处的颜色
-                  },
-                  {
-                    offset: 0.5,
-                    color: "rgba(255,255,255,1)", // 100% 处的颜色
-                  },
-                  {
-                    offset: 1,
-                    color: "rgba(255,255,255,0)", // 100% 处的颜色
-                  },
-                ],
-                global: false, // 缺省为 false
-              },
+        },
+        toolbox: {
+          show: false,
+          feature: {
+            dataZoom: {
+              yAxisIndex: "none",
             },
+            dataView: { readOnly: false },
+            magicType: { type: ["line", "bar"] },
+            restore: {},
+            saveAsImage: {},
           },
         },
-        grid: {
-          // top: "18%",
-          left: "1%",
-          right: "5%",
-          bottom: "14%",
-          // containLabel: true
+        xAxis: {
+          type: "category",
+          boundaryGap: false,
+          data: [
+            "0:00",
+            "1:00",
+            "2:00",
+            "3:00",
+            "4:00",
+            "5:00",
+            "6:00",
+            "7:00",
+            "8:00",
+            "9:00",
+            "10:00",
+            "11:00",
+            "12:00",
+            "13:00",
+            "14:00",
+            "15:00",
+            "16:00",
+            "17:00",
+            "18:00",
+            "19:00",
+            "20:00",
+            "21:00",
+            "22:00",
+            "23:00",
+          ],
         },
-        xAxis: [
-          {
-            type: "category",
-            boundaryGap: true,
-            axisLine: {
-              //坐标轴轴线相关设置。数学上的x轴
-              show: true,
-
-              lineStyle: {
-                color: 'color:"#092b5d"', //线条颜色
-              },
-            },
-            axisLabel: {
-              //坐标轴刻度标签的相关设置
-              textStyle: {
-                color: "#ccc",
-                margin: 15,
-              },
-              formatter: function (data) {
-                return data;
-              },
-            },
-            axisTick: {
-              show: false,
-            },
-            data: data.city,
+        yAxis: {
+          type: "value",
+          show: false,
+          axisLabel: {
+            formatter: "{value} h",
           },
-        ],
-        yAxis: [
-          {
-            min: 0,
-            max: 100,
-            splitLine: {
-              show: true,
-              lineStyle: {
-                color: "#284785",
-              },
-            },
-            axisLine: {
-              show: false,
-              lineStyle: {
-                color: "#cccc",
-              },
-            },
-            axisLabel: {
-              show: false,
-              textStyle: {
-                color: "#cccc",
-              },
-              formatter: function (value) {
-                if (value === 0) {
-                  return value;
-                }
-                return value + "%";
-              },
-            },
-            axisTick: {
-              show: false,
-            },
-          },
-        ],
+        },
         series: [
           {
-            name: "在校人数",
-            smooth: true, //是否平滑
+            name: "人流量",
             type: "line",
-            symbol: "circle", // 默认是空心圆（中间是白色的），改成实心圆
-            showAllSymbol: true,
-            symbolSize: 8,
-            lineStyle: {
-              normal: {
-                color: "#7c80f4", // 线条颜色
-              },
-              borderColor: "rgba(0,0,0,.4)",
-            },
-            itemStyle: {
-              color: "rgba(255,255,255,.8)",
-              borderColor: "#646ace",
-              borderWidth: 2,
-            },
-            label: {
-              normal: {
-                show: true,
-                position: "top",
-                formatter: [" {a|{c}%}"].join(","),
-                rich: {
-                  a: {
-                    color: "#fff",
-                    align: "center",
-                  },
-                },
-              },
-            },
-            tooltip: {
-              show: true,
-            },
-            areaStyle: {
-              //区域填充样式
-              normal: {
-                //线性渐变，前4个参数分别是x0,y0,x2,y2(范围0~1);相当于图形包围盒中的百分比。如果最后一个参数是‘true’，则该四个值是绝对像素位置。
-                color: new echarts.graphic.LinearGradient(
-                  0,
-                  0,
-                  0,
-                  1,
-                  [
-                    {
-                      offset: 0,
-                      color: "rgba(124, 128, 244,.3)",
-                    },
-                    {
-                      offset: 1,
-                      color: "rgba(124, 128, 244, 0)",
-                    },
-                  ],
-                  false
-                ),
-                shadowColor: "rgba(53,142,215, 0.9)", //阴影颜色
-                shadowBlur: 20, //shadowBlur设图形阴影的模糊大小。配合shadowColor,shadowOffsetX/Y, 设置图形的阴影效果。
-              },
-            },
-            data: data.num,
+            data: [
+              2, 4, 5, 2, 3, 7, 8, 5, 5, 6, 8, 5, 5, 2, 7, 8, 9, 5, 5, 2, 1, 4,
+              8, 2,
+            ],
+          },
+          {
+            name: "人数",
+            type: "line",
+            data: [
+              10, 13, 8, 12, 9, 10, 9, 15, 15, 12, 11, 13, 18, 12, 11, 18, 19,
+              15, 18, 20, 14, 14, 14, 13,
+            ],
           },
         ],
       };
+
       myChart.setOption(option);
       window.addEventListener("resize", function () {
         myChart.resize();
@@ -211,18 +108,32 @@ export default {
   },
 };
 </script>
-
-<style>
-.lines {
+<style scoped>
+#cols2 {
+  top: 10px;
+  height: 7%;
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  color: white;
+  text-shadow: 0 0 8px rgb(0, 233, 249);
+  position: absolute;
+  /* padding-top: 4%; */
+  /* position: relative; */
+  /* top: 6%; */
+}
+.line {
   height: 100%;
   width: 100%;
-  /* background-color: rgba(1, 131, 196, 0.05); */
-  /* border: solid 1px rgba(1, 131, 196, 0.25); */
-  /* background-color: rbga(); */
-  /* border-radius: 10%; */
-  /* border-top-left-radius: 10%;
-  border-top-right-radius: 0%;
-  border-bottom-right-radius: 10%;
-  border-bottom-left-radius: 1%; */
+  /* border: solid 1px rgba(255, 255, 255, 0);
+  border-top-color: rgba(255, 255, 255, 0.12); */
+}
+.line {
+  /* border-top-color: rgba(255, 255, 255, 0.12);
+  border: solid 1px rgba(255, 255, 255, 0); */
+  height: 100%;
+  width: 100%;
+  /* background-color: rgb(168, 99, 99); */
 }
 </style>

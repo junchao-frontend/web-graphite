@@ -1,6 +1,6 @@
 <template>
   <div class="forms">
-    <div id="formTitle">各学院人数对比</div>
+    <div id="formTitle">CEMS、VOC、PM10实时数据</div>
     <div id="Form">
       <dv-scroll-board :config="config1" />
     </div>
@@ -13,7 +13,7 @@ export default {
   data () {
     return {
       config1: {
-        header: [" 学院", "学生", "教职工"],
+        header: [" 名称", "值", "时间"],
         headerBGC: "rgba(0,0,0,.3)",
         oddRowBGC: "rgba(255,255,255,.1)",
         evenRowBGC: "rgba(0,0,0,0)",
@@ -71,6 +71,7 @@ export default {
 
 <style>
 #formTitle {
+  top: 10px;
   height: 7%;
   color: white;
   text-align: center;
@@ -78,7 +79,7 @@ export default {
   color: white;
   text-shadow: 0 0 8px rgb(0, 233, 249);
   position: relative;
-  top: 2%;
+  /* top: 2%; */
 }
 #Form {
   height: 90%;

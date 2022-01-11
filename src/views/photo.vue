@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 <template>
   <div class="main">
     <div id="photosphere" class="photosphere">
@@ -7,47 +8,52 @@
     </div>
     <div class="left">
       <div class="left1">
-        <Tips></Tips>
+        <EchartsRadar></EchartsRadar>
+      <div @click="large('radar')" class="large-icon"><svg t="1641888518288" fill="#02eefc" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5459" width="16" height="16"><path d="M852.68743 966.232318 171.311547 966.232318c-62.714867 0-113.562988-50.846038-113.562988-113.558335L57.748558 171.324994c0-62.712297 50.848122-113.558335 113.562988-113.558335l681.376907 0c62.714867 0 113.562988 50.846038 113.562988 113.558335l0 681.348989C966.250418 915.38628 915.40332 966.232318 852.68743 966.232318zM909.469948 171.324994c0-31.356149-25.424061-56.779168-56.781494-56.779168L171.311547 114.545826c-31.357433 0-56.781494 25.423019-56.781494 56.779168l0 681.348989c0 31.357172 25.424061 56.779168 56.781494 56.779168l681.376907 0c31.358457 0 56.781494-25.423019 56.781494-56.779168L909.469948 171.324994zM824.297706 483.610416c-15.665413 0-28.390747-12.697183-28.390747-28.389584l0.887243-186.638771L604.102866 461.264479l-40.145947-40.144302 193.023924-193.016015L568.782006 228.104161c-15.693044 0-28.390747-12.697183-28.390747-28.389584s12.697704-28.389584 28.390747-28.389584l254.711349 0c7.929925 0 15.082105 3.27151 20.238756 8.53949 5.490263 4.657067 8.955319 11.449773 8.955319 19.850094l0 255.506255C852.68743 470.913233 839.989727 483.610416 824.297706 483.610416zM455.219017 852.673983 200.506645 852.673983c-7.929925 0-15.082105-3.270487-20.239779-8.538467-5.489239-4.65809-8.955319-11.423167-8.955319-19.850094L171.311547 568.779168c0-15.692401 12.726357-28.389584 28.390747-28.389584 15.69202 0 28.390747 12.697183 28.390747 28.389584l-0.887243 186.6664 192.690312-192.710047 40.173577 40.143279-193.050531 193.016015 188.198837 0c15.69202 0 28.390747 12.697183 28.390747 28.389584C483.608741 839.9768 470.911038 852.673983 455.219017 852.673983z" p-id="5460"></path></svg></div>
       </div>
       <div class="left2">
         <EchartsBar></EchartsBar>
+      <div @click="large('bar')" class="large-icon"><svg t="1641888518288" fill="#02eefc" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5459" width="16" height="16"><path d="M852.68743 966.232318 171.311547 966.232318c-62.714867 0-113.562988-50.846038-113.562988-113.558335L57.748558 171.324994c0-62.712297 50.848122-113.558335 113.562988-113.558335l681.376907 0c62.714867 0 113.562988 50.846038 113.562988 113.558335l0 681.348989C966.250418 915.38628 915.40332 966.232318 852.68743 966.232318zM909.469948 171.324994c0-31.356149-25.424061-56.779168-56.781494-56.779168L171.311547 114.545826c-31.357433 0-56.781494 25.423019-56.781494 56.779168l0 681.348989c0 31.357172 25.424061 56.779168 56.781494 56.779168l681.376907 0c31.358457 0 56.781494-25.423019 56.781494-56.779168L909.469948 171.324994zM824.297706 483.610416c-15.665413 0-28.390747-12.697183-28.390747-28.389584l0.887243-186.638771L604.102866 461.264479l-40.145947-40.144302 193.023924-193.016015L568.782006 228.104161c-15.693044 0-28.390747-12.697183-28.390747-28.389584s12.697704-28.389584 28.390747-28.389584l254.711349 0c7.929925 0 15.082105 3.27151 20.238756 8.53949 5.490263 4.657067 8.955319 11.449773 8.955319 19.850094l0 255.506255C852.68743 470.913233 839.989727 483.610416 824.297706 483.610416zM455.219017 852.673983 200.506645 852.673983c-7.929925 0-15.082105-3.270487-20.239779-8.538467-5.489239-4.65809-8.955319-11.423167-8.955319-19.850094L171.311547 568.779168c0-15.692401 12.726357-28.389584 28.390747-28.389584 15.69202 0 28.390747 12.697183 28.390747 28.389584l-0.887243 186.6664 192.690312-192.710047 40.173577 40.143279-193.050531 193.016015 188.198837 0c15.69202 0 28.390747 12.697183 28.390747 28.389584C483.608741 839.9768 470.911038 852.673983 455.219017 852.673983z" p-id="5460"></path></svg></div>
       </div>
       <div class="left3">
         <EchartsForm></EchartsForm>
+      <div @click="large('form')" class="large-icon"><svg t="1641888518288" fill="#02eefc" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5459" width="16" height="16"><path d="M852.68743 966.232318 171.311547 966.232318c-62.714867 0-113.562988-50.846038-113.562988-113.558335L57.748558 171.324994c0-62.712297 50.848122-113.558335 113.562988-113.558335l681.376907 0c62.714867 0 113.562988 50.846038 113.562988 113.558335l0 681.348989C966.250418 915.38628 915.40332 966.232318 852.68743 966.232318zM909.469948 171.324994c0-31.356149-25.424061-56.779168-56.781494-56.779168L171.311547 114.545826c-31.357433 0-56.781494 25.423019-56.781494 56.779168l0 681.348989c0 31.357172 25.424061 56.779168 56.781494 56.779168l681.376907 0c31.358457 0 56.781494-25.423019 56.781494-56.779168L909.469948 171.324994zM824.297706 483.610416c-15.665413 0-28.390747-12.697183-28.390747-28.389584l0.887243-186.638771L604.102866 461.264479l-40.145947-40.144302 193.023924-193.016015L568.782006 228.104161c-15.693044 0-28.390747-12.697183-28.390747-28.389584s12.697704-28.389584 28.390747-28.389584l254.711349 0c7.929925 0 15.082105 3.27151 20.238756 8.53949 5.490263 4.657067 8.955319 11.449773 8.955319 19.850094l0 255.506255C852.68743 470.913233 839.989727 483.610416 824.297706 483.610416zM455.219017 852.673983 200.506645 852.673983c-7.929925 0-15.082105-3.270487-20.239779-8.538467-5.489239-4.65809-8.955319-11.423167-8.955319-19.850094L171.311547 568.779168c0-15.692401 12.726357-28.389584 28.390747-28.389584 15.69202 0 28.390747 12.697183 28.390747 28.389584l-0.887243 186.6664 192.690312-192.710047 40.173577 40.143279-193.050531 193.016015 188.198837 0c15.69202 0 28.390747 12.697183 28.390747 28.389584C483.608741 839.9768 470.911038 852.673983 455.219017 852.673983z" p-id="5460"></path></svg></div>
       </div>
     </div>
     <div class="right">
-      <div style="float: right; z-index: 999; top: 5px">
-        <button
-          @click="exit()"
-          style="
-            position: flex;
-            background: rgba(0, 0, 0, 0);
-            color: #0000ff;
-            border: 0;
-            font-size: 17px;
-            cursor: pointer;
-          "
-        >
-          <i class="el-icon-arrow-right" />
-        </button>
-      </div>
       <div class="right1">
-        <EchartsRadar></EchartsRadar>
+        <EchartsBLine></EchartsBLine>
+      <div @click="large('line')" class="large-icon-right"><svg t="1641888518288" fill="#02eefc" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5459" width="16" height="16"><path d="M852.68743 966.232318 171.311547 966.232318c-62.714867 0-113.562988-50.846038-113.562988-113.558335L57.748558 171.324994c0-62.712297 50.848122-113.558335 113.562988-113.558335l681.376907 0c62.714867 0 113.562988 50.846038 113.562988 113.558335l0 681.348989C966.250418 915.38628 915.40332 966.232318 852.68743 966.232318zM909.469948 171.324994c0-31.356149-25.424061-56.779168-56.781494-56.779168L171.311547 114.545826c-31.357433 0-56.781494 25.423019-56.781494 56.779168l0 681.348989c0 31.357172 25.424061 56.779168 56.781494 56.779168l681.376907 0c31.358457 0 56.781494-25.423019 56.781494-56.779168L909.469948 171.324994zM824.297706 483.610416c-15.665413 0-28.390747-12.697183-28.390747-28.389584l0.887243-186.638771L604.102866 461.264479l-40.145947-40.144302 193.023924-193.016015L568.782006 228.104161c-15.693044 0-28.390747-12.697183-28.390747-28.389584s12.697704-28.389584 28.390747-28.389584l254.711349 0c7.929925 0 15.082105 3.27151 20.238756 8.53949 5.490263 4.657067 8.955319 11.449773 8.955319 19.850094l0 255.506255C852.68743 470.913233 839.989727 483.610416 824.297706 483.610416zM455.219017 852.673983 200.506645 852.673983c-7.929925 0-15.082105-3.270487-20.239779-8.538467-5.489239-4.65809-8.955319-11.423167-8.955319-19.850094L171.311547 568.779168c0-15.692401 12.726357-28.389584 28.390747-28.389584 15.69202 0 28.390747 12.697183 28.390747 28.389584l-0.887243 186.6664 192.690312-192.710047 40.173577 40.143279-193.050531 193.016015 188.198837 0c15.69202 0 28.390747 12.697183 28.390747 28.389584C483.608741 839.9768 470.911038 852.673983 455.219017 852.673983z" p-id="5460"></path></svg></div>
       </div>
       <div class="right2">
-        <EchartsPie></EchartsPie>
+        <Graph></Graph>
+      <div @click="large('graph')" class="large-icon-right"><svg t="1641888518288" fill="#02eefc" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5459" width="16" height="16"><path d="M852.68743 966.232318 171.311547 966.232318c-62.714867 0-113.562988-50.846038-113.562988-113.558335L57.748558 171.324994c0-62.712297 50.848122-113.558335 113.562988-113.558335l681.376907 0c62.714867 0 113.562988 50.846038 113.562988 113.558335l0 681.348989C966.250418 915.38628 915.40332 966.232318 852.68743 966.232318zM909.469948 171.324994c0-31.356149-25.424061-56.779168-56.781494-56.779168L171.311547 114.545826c-31.357433 0-56.781494 25.423019-56.781494 56.779168l0 681.348989c0 31.357172 25.424061 56.779168 56.781494 56.779168l681.376907 0c31.358457 0 56.781494-25.423019 56.781494-56.779168L909.469948 171.324994zM824.297706 483.610416c-15.665413 0-28.390747-12.697183-28.390747-28.389584l0.887243-186.638771L604.102866 461.264479l-40.145947-40.144302 193.023924-193.016015L568.782006 228.104161c-15.693044 0-28.390747-12.697183-28.390747-28.389584s12.697704-28.389584 28.390747-28.389584l254.711349 0c7.929925 0 15.082105 3.27151 20.238756 8.53949 5.490263 4.657067 8.955319 11.449773 8.955319 19.850094l0 255.506255C852.68743 470.913233 839.989727 483.610416 824.297706 483.610416zM455.219017 852.673983 200.506645 852.673983c-7.929925 0-15.082105-3.270487-20.239779-8.538467-5.489239-4.65809-8.955319-11.423167-8.955319-19.850094L171.311547 568.779168c0-15.692401 12.726357-28.389584 28.390747-28.389584 15.69202 0 28.390747 12.697183 28.390747 28.389584l-0.887243 186.6664 192.690312-192.710047 40.173577 40.143279-193.050531 193.016015 188.198837 0c15.69202 0 28.390747 12.697183 28.390747 28.389584C483.608741 839.9768 470.911038 852.673983 455.219017 852.673983z" p-id="5460"></path></svg></div>
+
       </div>
       <div class="right3">
-        <EchartsLine></EchartsLine>
+        <EchartsPie></EchartsPie>
+      <div @click="large('pie')" class="large-icon-right"><svg t="1641888518288" fill="#02eefc" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5459" width="16" height="16"><path d="M852.68743 966.232318 171.311547 966.232318c-62.714867 0-113.562988-50.846038-113.562988-113.558335L57.748558 171.324994c0-62.712297 50.848122-113.558335 113.562988-113.558335l681.376907 0c62.714867 0 113.562988 50.846038 113.562988 113.558335l0 681.348989C966.250418 915.38628 915.40332 966.232318 852.68743 966.232318zM909.469948 171.324994c0-31.356149-25.424061-56.779168-56.781494-56.779168L171.311547 114.545826c-31.357433 0-56.781494 25.423019-56.781494 56.779168l0 681.348989c0 31.357172 25.424061 56.779168 56.781494 56.779168l681.376907 0c31.358457 0 56.781494-25.423019 56.781494-56.779168L909.469948 171.324994zM824.297706 483.610416c-15.665413 0-28.390747-12.697183-28.390747-28.389584l0.887243-186.638771L604.102866 461.264479l-40.145947-40.144302 193.023924-193.016015L568.782006 228.104161c-15.693044 0-28.390747-12.697183-28.390747-28.389584s12.697704-28.389584 28.390747-28.389584l254.711349 0c7.929925 0 15.082105 3.27151 20.238756 8.53949 5.490263 4.657067 8.955319 11.449773 8.955319 19.850094l0 255.506255C852.68743 470.913233 839.989727 483.610416 824.297706 483.610416zM455.219017 852.673983 200.506645 852.673983c-7.929925 0-15.082105-3.270487-20.239779-8.538467-5.489239-4.65809-8.955319-11.423167-8.955319-19.850094L171.311547 568.779168c0-15.692401 12.726357-28.389584 28.390747-28.389584 15.69202 0 28.390747 12.697183 28.390747 28.389584l-0.887243 186.6664 192.690312-192.710047 40.173577 40.143279-193.050531 193.016015 188.198837 0c15.69202 0 28.390747 12.697183 28.390747 28.389584C483.608741 839.9768 470.911038 852.673983 455.219017 852.673983z" p-id="5460"></path></svg></div>
+
       </div>
     </div>
     <div class="title">
       <!-- <span class="titletext">瑞通碳素环保管控平台</span> -->
-      <dv-decoration-11 style="width:950px" class="title-text"
-        >瑞通碳素环保管控平台</dv-decoration-11
-      >
+      <dv-decoration-11 style="width: 950px" class="title-text"
+        >瑞通碳素环保管控平台
+        <i
+          class="el-icon-full-screen"
+          style="font-size: 16px; cursor: pointer; color: RGB(126, 136, 157)"
+          @click="fullScreen()"
+      /></dv-decoration-11>
     </div>
+    <el-dialog title="测试" :visible.sync="largeEchart" width="50%">
+        <fullGraph v-if="type === 'graph'"></fullGraph>
+        <fullEchartsBar v-else-if="type === 'bar'"></fullEchartsBar>
+        <FullEchartsPie v-else-if="type === 'pie'"></FullEchartsPie>
+        <fullEchartsRadar v-else-if="type === 'radar'"></fullEchartsRadar>
+        <fullEchartsForm v-else-if="type === 'form'"></fullEchartsForm>
+        <EchartsDialog v-else-if="type === 'line'"></EchartsDialog>
+      </el-dialog>
   </div>
 </template>
 
@@ -58,25 +64,39 @@ import { Viewer } from "photo-sphere-viewer";
 import "photo-sphere-viewer/dist/photo-sphere-viewer.css";
 import EchartsRadar from "../components/List/echartsRadar.vue";
 import EchartsPie from "../components/List/echartsPie";
-import EchartsForm from "../components/List/echartsForm";
 import EchartsBar from "../components/List/echartsBar";
-import Tips from "../components/List/Tips";
-import EchartsLine from "../components/List/echartsLine";
+import EchartsForm from "../components/List/echartsForm";
+import EchartsBLine from "../components/List/echartsLine";
+import Graph from "../components/List/graph";
 import EchartsDialog from "../components/List/echartsDialog";
+import FullEchartsPie from '../components/fullScreen/fullEchartsPie'
+import fullEchartsBar from '../components/fullScreen/fullEchartsBar'
+import fullGraph from '../components/fullScreen/fullGraph'
+import fullEchartsRadar from '../components/fullScreen/fullEchartsRadar'
+import fullEchartsForm from '../components/fullScreen/fullEchartsForm'
+// import fullEchartsLine from '../components/fullScreen/fullEchartsLine'
 export default {
   components: {
     // Echarts
+    EchartsBar,
     EchartsRadar,
     EchartsPie,
     EchartsForm,
-    EchartsBar,
-    EchartsLine,
+    EchartsBLine,
+    Graph,
     EchartsDialog,
-    Tips,
+    FullEchartsPie,
+    fullEchartsBar,
+    fullGraph,
+    fullEchartsRadar,
+    fullEchartsForm,
+    // fullEchartsLine
   },
   data() {
     return {
+      type: '',
       panoramadata: null,
+      largeEchart: false,
       img: require("./70.jpg"),
       markersData: [],
       dialogVisible: false,
@@ -109,29 +129,17 @@ export default {
                   id: "html1",
                   longitude: 5.7252865521698775,
                   latitude: -0.4710962437277053,
-                  html: `<div class="svg-container">
-                        <svg viewBox="0 0 680 240" class="test">
-                            <path fill="rgba(64, 97, 148, 0.434)" d="
-                        M 5 20 L 5 10 L 12 3  L 60 3 L 68 10
-                        L 660 10 L 675 25
-                        L 675 235 L 20 235
-                        L 5 220 L 5 20
-                      " stroke="#6586ec"></path>
-                            <path fill="transparent" stroke-width="3" stroke-linecap="round" stroke-dasharray="10, 5" d="M 16 9 L 61 9"
-                                stroke="#6586ec"></path>
-                            <path fill="transparent" d="M 5 20 L 5 10 L 12 3  L 60 3 L 68 10" stroke="#2cf7fe"></path>
-                            <path fill="transparent" d="M 675 210 L 675 235 L 650 235" stroke="#2cf7fe"></path>
-                        </svg>
-                    </div>
-                    <div class="svg-text">
-                    <div class="svg-text-title">焙烧厂区大门颗粒物</div>
-                    <div class="svg-text-body">
-                    <div class="svg-text-item"><span class="left-span">PM2.5:</span><span class="right-span">25mg/m3</span></div>
-                    <div class="svg-text-item"><span class="left-span">PM10:</span><span class="right-span">35mg/m3</span></div>
-                    <div class="svg-text-item"><span class="left-span">TSP:</span><span class="right-span">45mg/m3</span></div>
-                    </div>
-                    </div>
-                    <div class='svg-pulse'>`,
+                  html: `<div class="info-warp-peishao">
+                            <div class="info-warp-peishao-title">
+                            <span>焙烧厂区大门颗粒物</span>
+                            </div>
+                            <div class="info-warp-peishao-body">
+                            <span class="left-span">PM2.5:</span><span class="right-span">25mg/m3</span>
+                            <span class="left-span">PM10:</span><span class="right-span">35mg/m3</span>
+                            <span class="left-span">TSP:</span><span class="right-span">45mg/m3</span>
+                            </div>
+                        </div>
+                        <div class='info-line-peishao'></div>`,
                   width: 32,
                   height: 32,
                   anchor: "bottom center",
@@ -141,29 +149,17 @@ export default {
                   id: "html2",
                   longitude: 6.015142458534825,
                   latitude: -0.33140880893830915,
-                  html: `<div class="svg-container-pm2" >
-                        <svg viewBox="0 0 680 240" class="test">
-                            <path fill="rgba(64, 97, 148, 0.434)" d="
-                        M 5 20 L 5 10 L 12 3  L 60 3 L 68 10
-                        L 660 10 L 675 25
-                        L 675 235 L 20 235
-                        L 5 220 L 5 20
-                      " stroke="#6586ec"></path>
-                            <path fill="transparent" stroke-width="3" stroke-linecap="round" stroke-dasharray="10, 5" d="M 16 9 L 61 9"
-                                stroke="#6586ec"></path>
-                            <path fill="transparent" d="M 5 20 L 5 10 L 12 3  L 60 3 L 68 10" stroke="#2cf7fe"></path>
-                            <path fill="transparent" d="M 675 210 L 675 235 L 650 235" stroke="#2cf7fe"></path>
-                        </svg>
-                    </div>
-                    <div class="svg-text-pm2">
-                    <div class="svg-text-pm2-title">一烧车间门口颗粒物</div>
-                    <div class="svg-text-pm2-body">
-                    <div class="svg-text-pm2-item"><span class="left-span">PM2.5:</span><span class="right-span">25mg/m3</span></div>
-                    <div class="svg-text-pm2-item"><span class="left-span">PM10:</span><span class="right-span">35mg/m3</span></div>
-                    <div class="svg-text-pm2-item"><span class="left-span">TSP:</span><span class="right-span">45mg/m3</span></div>
-                    </div>
-                    </div>
-                    <div class='svg-pulse-pm2'>`,
+                  html: `<div class="info-warp-yishaop2">
+                            <div class="info-warp-yishaop2-title">
+                            <span>一烧车间门口颗粒物</span>
+                            </div>
+                            <div class="info-warp-yishaop2-body">
+                            <span class="left-span">PM2.5:</span><span class="right-span">25mg/m3</span>
+                            <span class="left-span">PM10:</span><span class="right-span">35mg/m3</span>
+                            <span class="left-span">TSP:</span><span class="right-span">45mg/m3</span>
+                            </div>
+                        </div>
+                        <div class='info-line-yishaop2'></div>`,
                   width: 32,
                   height: 32,
                   anchor: "bottom center",
@@ -173,29 +169,17 @@ export default {
                   id: "html3",
                   longitude: 0.07393947431842574,
                   latitude: -0.12947662495924073,
-                  html: `<div class="svg-container">
-                        <svg viewBox="0 0 680 240" class="test">
-                            <path fill="rgba(64, 97, 148, 0.434)" d="
-                        M 5 20 L 5 10 L 12 3  L 60 3 L 68 10
-                        L 660 10 L 675 25
-                        L 675 235 L 20 235
-                        L 5 220 L 5 20
-                      " stroke="#6586ec"></path>
-                            <path fill="transparent" stroke-width="3" stroke-linecap="round" stroke-dasharray="10, 5" d="M 16 9 L 61 9"
-                                stroke="#6586ec"></path>
-                            <path fill="transparent" d="M 5 20 L 5 10 L 12 3  L 60 3 L 68 10" stroke="#2cf7fe"></path>
-                            <path fill="transparent" d="M 675 210 L 675 235 L 650 235" stroke="#2cf7fe"></path>
-                        </svg>
-                    </div>
-                    <div class="svg-text">
-                    <div class="svg-text-title">压型车间门口颗粒物</div>
-                    <div class="svg-text-body">
-                    <div class="svg-text-item"><span class="left-span">PM2.5:</span><span class="right-span">25mg/m3</span></div>
-                    <div class="svg-text-item"><span class="left-span">PM10:</span><span class="right-span">35mg/m3</span></div>
-                    <div class="svg-text-item"><span class="left-span">TSP:</span><span class="right-span">45mg/m3</span></div>
-                    </div>
-                    </div>
-                    <div class='svg-pulse'>`,
+                  html: `<div class="info-warp-yaxing">
+                            <div class="info-warp-yaxing-title">
+                            <span>压型车间门口颗粒物</span>
+                            </div>
+                            <div class="info-warp-yaxing-body">
+                            <span class="left-span">PM2.5:</span><span class="right-span">25mg/m3</span>
+                            <span class="left-span">PM10:</span><span class="right-span">35mg/m3</span>
+                            <span class="left-span">TSP:</span><span class="right-span">45mg/m3</span>
+                            </div>
+                        </div>
+                        <div class='info-line-yaxing'></div>`,
                   width: 32,
                   height: 32,
                   anchor: "bottom center",
@@ -205,29 +189,17 @@ export default {
                   id: "html4",
                   longitude: 0.7040675782849761,
                   latitude: -0.33096554138647405,
-                  html: `<div class="svg-container">
-                        <svg viewBox="0 0 680 240" class="test">
-                            <path fill="rgba(64, 97, 148, 0.434)" d="
-                        M 5 20 L 5 10 L 12 3  L 60 3 L 68 10
-                        L 660 10 L 675 25
-                        L 675 235 L 20 235
-                        L 5 220 L 5 20
-                      " stroke="#6586ec"></path>
-                            <path fill="transparent" stroke-width="3" stroke-linecap="round" stroke-dasharray="10, 5" d="M 16 9 L 61 9"
-                                stroke="#6586ec"></path>
-                            <path fill="transparent" d="M 5 20 L 5 10 L 12 3  L 60 3 L 68 10" stroke="#2cf7fe"></path>
-                            <path fill="transparent" d="M 675 210 L 675 235 L 650 235" stroke="#2cf7fe"></path>
-                        </svg>
-                    </div>
-                    <div class="svg-text">
-                    <div class="svg-text-title">石墨化厂区大门颗粒物</div>
-                    <div class="svg-text-body">
-                    <div class="svg-text-item"><span class="left-span">PM2.5:</span><span class="right-span">25mg/m3</span></div>
-                    <div class="svg-text-item"><span class="left-span">PM10:</span><span class="right-span">35mg/m3</span></div>
-                    <div class="svg-text-item"><span class="left-span">TSP:</span><span class="right-span">45mg/m3</span></div>
-                    </div>
-                    </div>
-                    <div class='svg-pulse'>`,
+                  html: `<div class="info-warp-yishao">
+                            <div class="info-warp-yishao-title">
+                            <span>石墨化厂区大门颗粒物</span>
+                            </div>
+                            <div class="info-warp-yishao-body">
+                            <span class="left-span">PM2.5:</span><span class="right-span">25mg/m3</span>
+                            <span class="left-span">PM10:</span><span class="right-span">35mg/m3</span>
+                            <span class="left-span">TSP:</span><span class="right-span">45mg/m3</span>
+                            </div>
+                        </div>
+                        <div class='info-line-yishao'></div>`,
                   width: 32,
                   height: 32,
                   anchor: "bottom center",
@@ -237,29 +209,17 @@ export default {
                   id: "html5",
                   longitude: 0.5399753121111439,
                   latitude: -0.20969402700795658,
-                  html: `<div class="svg-container">
-                        <svg viewBox="0 0 680 240" class="test">
-                            <path fill="rgba(64, 97, 148, 0.434)" d="
-                        M 5 20 L 5 10 L 12 3  L 60 3 L 68 10
-                        L 660 10 L 675 25
-                        L 675 235 L 20 235
-                        L 5 220 L 5 20
-                      " stroke="#6586ec"></path>
-                            <path fill="transparent" stroke-width="3" stroke-linecap="round" stroke-dasharray="10, 5" d="M 16 9 L 61 9"
-                                stroke="#6586ec"></path>
-                            <path fill="transparent" d="M 5 20 L 5 10 L 12 3  L 60 3 L 68 10" stroke="#2cf7fe"></path>
-                            <path fill="transparent" d="M 675 210 L 675 235 L 650 235" stroke="#2cf7fe"></path>
-                        </svg>
-                    </div>
-                    <div class="svg-text">
-                    <div class="svg-text-title">石墨化车间大门颗粒物</div>
-                    <div class="svg-text-body">
-                    <div class="svg-text-item"><span class="left-span">PM2.5:</span><span class="right-span">25mg/m3</span></div>
-                    <div class="svg-text-item"><span class="left-span">PM10:</span><span class="right-span">35mg/m3</span></div>
-                    <div class="svg-text-item"><span class="left-span">TSP:</span><span class="right-span">45mg/m3</span></div>
-                    </div>
-                    </div>
-                    <div class='svg-pulse'>`,
+                  html: `<div class="info-warp-yishao">
+                            <div class="info-warp-yishao-title">
+                            <span>石墨化车间大门颗粒物</span>
+                            </div>
+                            <div class="info-warp-yishao-body">
+                            <span class="left-span">PM2.5:</span><span class="right-span">25mg/m3</span>
+                            <span class="left-span">PM10:</span><span class="right-span">35mg/m3</span>
+                            <span class="left-span">TSP:</span><span class="right-span">45mg/m3</span>
+                            </div>
+                        </div>
+                        <div class='info-line-yishao'></div>`,
                   width: 32,
                   height: 32,
                   anchor: "bottom center",
@@ -269,105 +229,60 @@ export default {
                   id: "html6",
                   longitude: 6.142411710733739,
                   latitude: -0.13664440734131178,
-                  html: `<div class="svg-container-wuzu">
-                        <svg viewBox="0 0 680 240" class="test">
-                            <path fill="rgba(64, 97, 148, 0.434)" d="
-                        M 5 20 L 5 10 L 12 3  L 60 3 L 68 10
-                        L 660 10 L 675 25
-                        L 675 235 L 20 235
-                        L 5 220 L 5 20
-                      " stroke="#6586ec"></path>
-                            <path fill="transparent" stroke-width="3" stroke-linecap="round" stroke-dasharray="10, 5" d="M 16 9 L 61 9"
-                                stroke="#6586ec"></path>
-                            <path fill="transparent" d="M 5 20 L 5 10 L 12 3  L 60 3 L 68 10" stroke="#2cf7fe"></path>
-                            <path fill="transparent" d="M 675 210 L 675 235 L 650 235" stroke="#2cf7fe"></path>
-                        </svg>
-                    </div>
-                    <div class="svg-text-wuzu">
-                    <div class="svg-text-wuzu-title">无组织VOCs</div>
-                    <div class="svg-text-wuzu-body">
-                    <div class="svg-text-wuzu-item"><span class="left-span">浓度</span><span class="right-span">25mg/m3</span></div>
-                    </div>
-                    </div>
-                    <div class='svg-pulse-wuzu'>`,
+                  html: `<div class="info-warp-wuzu">
+                            <div class="info-warp-wuzu-title">
+                            <span>无组织VOCs</span>
+                            </div>
+                            <div class="info-warp-wuzu-body">
+                            <span class="left-span">浓度</span><span class="right-span">25mg/m3</span>
+                            </div>
+                        </div>
+                        <div class='info-line-wuzu'></div>`,
                   width: 32,
                   height: 32,
                   anchor: "bottom center",
-                  tooltip: "无组织VOCs",
+                  tooltip: "PM扬尘仪",
                 },
                 {
                   id: "html7",
                   longitude: 0.056468770790485866,
                   latitude: -0.14382677250626164,
-                  html: `<div class="svg-container-wuzu">
-                        <svg viewBox="0 0 680 240" class="test">
-                            <path fill="rgba(64, 97, 148, 0.434)" d="
-                        M 5 20 L 5 10 L 12 3  L 60 3 L 68 10
-                        L 660 10 L 675 25
-                        L 675 235 L 20 235
-                        L 5 220 L 5 20
-                      " stroke="#6586ec"></path>
-                            <path fill="transparent" stroke-width="3" stroke-linecap="round" stroke-dasharray="10, 5" d="M 16 9 L 61 9"
-                                stroke="#6586ec"></path>
-                            <path fill="transparent" d="M 5 20 L 5 10 L 12 3  L 60 3 L 68 10" stroke="#2cf7fe"></path>
-                            <path fill="transparent" d="M 675 210 L 675 235 L 650 235" stroke="#2cf7fe"></path>
-                        </svg>
-                    </div>
-                    <div class="svg-text-wuzu">
-                    <div class="svg-text-wuzu-title">有组织VOCs</div>
-                    <div class="svg-text-wuzu-body">
-                    <div class="svg-text-wuzu-item"><span class="left-span">浓度</span><span class="right-span">45mg/m3</span></div>
-                    </div>
-                    </div>
-                    <div class='svg-pulse-wuzu'>`,
+                  html: `<div class="info-warp-youzu">
+                            <div class="info-warp-youzu-title">
+                            <span>有组织VOCs</span>
+                            </div>
+                            <div class="info-warp-youzu-body">
+                            <span class="left-span">浓度</span><span class="right-span">45mg/m3</span>
+                            </div>
+                        </div>
+                        <div class='info-line-youzu'></div>`,
                   width: 32,
                   height: 32,
                   anchor: "bottom center",
-                  tooltip: "有组织VOCs",
+                  tooltip: "PM扬尘仪",
                 },
                 {
                   id: "html8",
                   longitude: 6.028658770109717,
                   latitude: -0.30994143771483906,
-                  html: `<div class="svg-container-cem">
-                        <svg viewBox="0 0 680 240" class="test">
-                            <path fill="rgba(64, 97, 148, 0.434)" d="
-                        M 5 20 L 5 10 L 12 3  L 60 3 L 68 10
-                        L 660 10 L 675 25
-                        L 675 235 L 20 235
-                        L 5 220 L 5 20
-                      " stroke="#6586ec"></path>
-                            <path fill="transparent" stroke-width="3" stroke-linecap="round" stroke-dasharray="10, 5" d="M 16 9 L 61 9"
-                                stroke="#6586ec"></path>
-                            <path fill="transparent" d="M 5 20 L 5 10 L 12 3  L 60 3 L 68 10" stroke="#2cf7fe"></path>
-                            <path fill="transparent" d="M 675 210 L 675 235 L 650 235" stroke="#2cf7fe"></path>
-                        </svg>
-                    </div>
-                    <div class="svg-text-cem">
-                    <div class="svg-text-cem-title">超低排放监测(CEMS)</div>
-                    <div class="svg-text-cem-body">
-                    <div class="svg-text-item"><span class="left-span-cem">颗粒物:</span><span class="right-span-cem">25mg/m3</span></div>
-                    <div class="svg-text-item"><span class="left-span-cem">NOx:</span><span class="right-span-cem">35mg/m3</span></div>
-                    <div class="svg-text-item"><span class="left-span-cem">SO2:</span><span class="right-span-cem">45mg/m3</span></div>
-                    <div class="svg-text-item"><span class="left-span-cem">O3:</span><span class="right-span-cem">45mg/m3</span></div>
-                    <div class="svg-text-item"><span class="left-span-cem">CO:</span><span class="right-span-cem">44mg/m3</span></div>
-                    </div>
-                    </div>
-                    <div class='svg-pulse-cem'>`,
+                  html: `<div class="info-warp-cems">
+                            <div class="info-warp-cems-title">
+                            <span>超低排放监测(CEMS)</span>
+                            </div>
+                            <div class="info-warp-cems-body">
+                              <span class="left-span">颗粒物:</span><span class="right-span">25mg/m3</span>
+                              <span class="left-span">NOx:</span><span class="right-span">35mg/m3</span>
+                              <span class="left-span">SO2:</span><span class="right-span">45mg/m3</span>
+                              <span class="left-span">O3:</span><span class="right-span">45mg/m3</span>
+                              <span class="left-span">CO:</span><span class="right-span">44mg/m3</span>
+                            </div>
+                        </div>
+                        <div class='info-line-cems'></div>`,
                   width: 32,
                   height: 32,
                   anchor: "bottom center",
-                  tooltip: "CEMS",
+                  tooltip: "PM扬尘仪",
                 },
-                // {
-                //   id: "html3",
-
-                //   html: "<div class='blue'><div class='yellow-text'>C</div></div><div class='pulse'></div>",
-                //   width: 32,
-                //   height: 32,
-                //   anchor: "bottom center",
-                //   tooltip: "CEMS",
-                // },
               ],
             },
           ],
@@ -382,208 +297,399 @@ export default {
         this.dialogVisible = true; // 弹出框
       });
     },
+    fullScreen() {
+      var docElm = document.documentElement
+      // W3C
+      if (docElm.requestFullscreen) {
+        docElm.requestFullscreen()
+      }
+      // FireFox
+      else if (docElm.mozRequestFullScreen) {
+        docElm.mozRequestFullScreen()
+      }
+      // Chrome等
+      else if (docElm.webkitRequestFullScreen) {
+        docElm.webkitRequestFullScreen()
+      }
+      // IE11
+      // eslint-disable-next-line no-undef
+      else if (elem.msRequestFullscreen) {
+        // eslint-disable-next-line no-undef
+        elem.msRequestFullscreen()
+      }
+      // 退出全屏
+      // W3C
+      if (document.exitFullscreen) {
+        document.exitFullscreen()
+      }
+      // FireFox
+      else if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen()
+      }
+      // Chrome等
+      else if (document.webkitCancelFullScreen) {
+        document.webkitCancelFullScreen()
+        // eslint-disable-next-line no-undef
+        data.name = '全屏'
+      }
+      // IE11
+      else if (document.msExitFullscreen) {
+        document.msExitFullscreen()
+      }
+    },
+    large (type) {
+      this.type = type
+      this.largeEchart = true
+    }
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.photosphere {
-  width: 100%;
-  height: 100%;
-}
-/deep/ .svg-container-pm2 {
-  // text-align: center;
-  z-index: 1;
+/**
+焙烧css
+*/
+/deep/ .info-warp-peishao {
+  bottom: 142px;
+  left: -90px;
   position: absolute;
-  right: -125px;
-  bottom: 100px;
-  width: 300px;
-  height: 200px;
-}
-/deep/ .svg-pulse-pm2 {
-  position: absolute;
-  // background: rgba(64, 97, 148, 0.434);
-  background: rgba(2, 238, 252,.4);
-  height: 200px;
-  width: 2px;
-  margin: -165px 0px 0px 5px;
-}
-/deep/ .svg-text-pm2 {
-  z-index: 2;
-  bottom: 205px;
-  left: -130px;
-  color: #02eefc;
-  position: absolute;
-  cursor: pointer;
+  width: 180px;
+  height: 100px;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 10%;
+  border-bottom-left-radius: 0;
+  backdrop-filter: blur(6px);
+  border: solid 1px rgba(64, 97, 148, 0.6);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: rgba(64, 97, 148, 0.534);
   &-title {
-    // margin: 0 auto;
-    width: 280px;
-    letter-spacing: 2px;
-    font-size: 20px;
-    // margin-bottom: 5px;
+    height: 30px;
+    border-bottom: solid 1px #ccc;
+    span {
+      color: #02eefc;
+      margin-left: 4%;
+      // margin-top: 5%;
+    }
   }
   &-body {
-    // margin-left: 10px;
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-  }
-  &-item {
+    margin-top: 8px;
     .left-span {
-      margin-right: 15px;
+      margin-left: 4%;
+      margin-right: 4%;
+      color: #dbeaeb;
       font-size: 14px;
-      color: #b2f1f5;
     }
     .right-span {
-      font-size: 14px;
       color: #02eefc;
+      font-size: 14px;
     }
   }
 }
-/deep/ .svg-container-cem {
-  // text-align: center;
-  z-index: 1;
+/deep/ .info-line-peishao {
   position: absolute;
-  right: -145px;
-  bottom: -55px;
-  width: 340px;
-  height: 200px;
-}
-/deep/ .left-span-cem {
-  margin-right: 15px;
-  font-size: 12px;
-  color: #b2f1f5;
-}
-/deep/ .right-span-cem {
-  font-size: 12px;
-  color: #02eefc;
-}
-/deep/ .svg-pulse-cem {
-  position: absolute;
-  // background: rgba(64, 97, 148, 0.434);
-  background: rgba(2, 238, 252,.4);
-  height: 60px;
+  background: rgba(2, 238, 252, 0.4);
+  height: 130px;
   width: 2px;
-  margin: -10px 0px 0px 5px;
+  margin: -110px 0px 0px 5px;
 }
-/deep/ .svg-text-cem {
-  z-index: 2;
-  bottom: 30px;
-  left: -150px;
-  color: #02eefc;
+
+/**
+一烧css
+*/
+/deep/ .info-warp-yishao {
+  bottom: 142px;
+  left: -90px;
   position: absolute;
-  cursor: pointer;
+  width: 180px;
+  height: 100px;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 10%;
+  border-bottom-left-radius: 0;
+  backdrop-filter: blur(6px);
+  border: solid 1px rgba(64, 97, 148, 0.6);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: rgba(64, 97, 148, 0.534);
   &-title {
-    // margin: 0 auto;
-    width: 280px;
-    letter-spacing: 2px;
-    font-size: 16px;
-    // margin-bottom: 5px;
+    height: 30px;
+    border-bottom: solid 1px #ccc;
+    span {
+      color: #02eefc;
+      margin-left: 4%;
+      // margin-top: 5%;
+    }
   }
   &-body {
-    // margin-left: 10px;
-    // margin-top: 5px;
-    display: flex;
-    flex-direction: column;
-  }
-}
-/deep/ .svg-container-wuzu {
-  // text-align: center;
-  z-index: 1;
-  position: absolute;
-  right: -95px;
-  bottom: -55px;
-  width: 250px;
-  height: 200px;
-}
-/deep/ .svg-pulse-wuzu {
-  position: absolute;
-  // background: rgba(64, 97, 148, 0.434);
-  background: rgba(2, 238, 252,.4);
-  height: 65px;
-  width: 2px;
-  margin: -25px 0px 0px 5px;
-}
-/deep/ .svg-text-wuzu {
-  z-index: 2;
-  bottom: 75px;
-  left: -114px;
-  color: #02eefc;
-  position: absolute;
-  cursor: pointer;
-  &-title {
-    // margin: 0 auto;
-    width: 280px;
-    letter-spacing: 2px;
-    font-size: 18px;
-    // margin-bottom: 5px;
-  }
-  &-body {
-    // margin-left: 10px;
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-  }
-  &-item {
+    margin-top: 8px;
     .left-span {
-      margin-right: 15px;
+      margin-left: 4%;
+      margin-right: 4%;
+      color: #dbeaeb;
       font-size: 14px;
-      color: #b2f1f5;
     }
     .right-span {
-      font-size: 14px;
       color: #02eefc;
+      font-size: 14px;
     }
   }
 }
-/deep/ .svg-container {
-  // text-align: center;
-  z-index: 1;
+/deep/ .info-line-yishao {
   position: absolute;
-  right: -125px;
-  bottom: 70px;
-  width: 300px;
-  height: 200px;
+  background: rgba(2, 238, 252, 0.4);
+  height: 145px;
+  width: 2px;
+  margin: -110px 0px 0px 5px;
 }
-/deep/ .svg-pulse {
+
+/**
+压型 css
+*/
+/deep/ .info-warp-yaxing {
+  bottom: 172px;
+  left: -90px;
   position: absolute;
-  // background: rgba(64, 97, 148, 0.434);
-  background: rgba(2, 238, 252,.4);
+  width: 180px;
+  height: 100px;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 10%;
+  border-bottom-left-radius: 0;
+  backdrop-filter: blur(6px);
+  border: solid 1px rgba(64, 97, 148, 0.6);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: rgba(64, 97, 148, 0.534);
+  &-title {
+    height: 30px;
+    border-bottom: solid 1px #ccc;
+    span {
+      color: #02eefc;
+      margin-left: 4%;
+      // margin-top: 5%;
+    }
+  }
+  &-body {
+    margin-top: 8px;
+    .left-span {
+      margin-left: 4%;
+      margin-right: 4%;
+      color: #dbeaeb;
+      font-size: 14px;
+    }
+    .right-span {
+      color: #02eefc;
+      font-size: 14px;
+    }
+  }
+}
+/deep/ .info-line-yaxing {
+  position: absolute;
+  background: rgba(2, 238, 252, 0.4);
   height: 165px;
   width: 2px;
   margin: -140px 0px 0px 5px;
 }
-/deep/ .svg-text {
-  z-index: 2;
-  bottom: 172px;
-  left: -130px;
-  color: #02eefc;
+
+/**
+一烧p2 css
+*/
+/deep/ .info-warp-yishaop2 {
+  bottom: 192px;
+  left: -90px;
   position: absolute;
-  cursor: pointer;
+  width: 180px;
+  height: 100px;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 10%;
+  border-bottom-left-radius: 0;
+  backdrop-filter: blur(6px);
+  border: solid 1px rgba(64, 97, 148, 0.6);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: rgba(64, 97, 148, 0.534);
   &-title {
-    // margin: 0 auto;
-    width: 280px;
-    letter-spacing: 2px;
-    font-size: 20px;
-    // margin-bottom: 5px;
+    height: 30px;
+    border-bottom: solid 1px #ccc;
+    span {
+      color: #02eefc;
+      margin-left: 4%;
+      // margin-top: 5%;
+    }
   }
   &-body {
-    // margin-left: 10px;
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-  }
-  &-item {
+    margin-top: 8px;
     .left-span {
-      margin-right: 15px;
+      margin-left: 4%;
+      margin-right: 4%;
+      color: #dbeaeb;
       font-size: 14px;
-      color: #b2f1f5;
     }
     .right-span {
-      font-size: 14px;
       color: #02eefc;
+      font-size: 14px;
     }
   }
+}
+/deep/ .info-line-yishaop2 {
+  position: absolute;
+  background: rgba(2, 238, 252, 0.4);
+  height: 195px;
+  width: 2px;
+  margin: -160px 0px 0px 5px;
+}
+
+/**
+无组织vocs css
+*/
+/deep/ .info-warp-wuzu {
+  bottom: 122px;
+  left: -65px;
+  position: absolute;
+  width: 130px;
+  height: 80px;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 10%;
+  border-bottom-left-radius: 0;
+  backdrop-filter: blur(6px);
+  border: solid 1px rgba(64, 97, 148, 0.6);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: rgba(64, 97, 148, 0.534);
+  &-title {
+    height: 30px;
+    border-bottom: solid 1px #ccc;
+    span {
+      color: #02eefc;
+      margin-left: 4%;
+      // margin-top: 5%;
+    }
+  }
+  &-body {
+    margin-top: 8px;
+    .left-span {
+      margin-left: 4%;
+      margin-right: 4%;
+      color: #dbeaeb;
+      font-size: 14px;
+    }
+    .right-span {
+      color: #02eefc;
+      font-size: 14px;
+    }
+  }
+}
+/deep/ .info-line-wuzu {
+  position: absolute;
+  background: rgba(2, 238, 252, 0.4);
+  height: 125px;
+  width: 2px;
+  margin: -90px 0px 0px 5px;
+}
+
+/**
+有组织vocs css
+*/
+/deep/ .info-warp-youzu {
+  bottom: 90px;
+  left: -65px;
+  position: absolute;
+  width: 130px;
+  height: 80px;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 10%;
+  border-bottom-left-radius: 0;
+  backdrop-filter: blur(6px);
+  border: solid 1px rgba(64, 97, 148, 0.6);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: rgba(64, 97, 148, 0.534);
+  &-title {
+    height: 30px;
+    border-bottom: solid 1px #ccc;
+    span {
+      color: #02eefc;
+      margin-left: 4%;
+      // margin-top: 5%;
+    }
+  }
+  &-body {
+    margin-top: 8px;
+    .left-span {
+      margin-left: 4%;
+      margin-right: 4%;
+      color: #dbeaeb;
+      font-size: 14px;
+    }
+    .right-span {
+      color: #02eefc;
+      font-size: 14px;
+    }
+  }
+}
+/deep/ .info-line-youzu {
+  position: absolute;
+  background: rgba(2, 238, 252, 0.4);
+  height: 90px;
+  width: 2px;
+  margin: -60px 0px 0px 5px;
+}
+/**
+CEMS css
+*/
+/deep/ .info-warp-cems {
+  bottom: 0px;
+  left: -90px;
+  position: absolute;
+  width: 185px;
+  height: 130px;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 10%;
+  border-bottom-left-radius: 0;
+  backdrop-filter: blur(6px);
+  border: solid 1px rgba(64, 97, 148, 0.6);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: rgba(64, 97, 148, 0.534);
+  &-title {
+    height: 30px;
+    border-bottom: solid 1px #ccc;
+    span {
+      color: #02eefc;
+      margin-left: 4%;
+      // margin-top: 5%;
+    }
+  }
+  &-body {
+    .left-span {
+      margin-left: 4%;
+      margin-right: 4%;
+      color: #dbeaeb;
+      font-size: 14px;
+    }
+    .right-span {
+      color: #02eefc;
+      font-size: 14px;
+    }
+  }
+}
+/deep/ .info-line-cems {
+  position: absolute;
+  background: rgba(2, 238, 252, 0.4);
+  height: 20px;
+  width: 2px;
+  margin: 30px 0px 0px 5px;
+}
+
+.photosphere {
+  width: 100%;
+  height: 100%;
 }
 .main {
   width: 100%;
@@ -688,6 +794,7 @@ export default {
   border-bottom-left-radius: 10%;
 }
 .right3 {
+  // padding-left: 30px;
   backdrop-filter: blur(8px);
   width: 100%;
   height: 35%;
@@ -701,10 +808,6 @@ export default {
 /deep/ .dv-scroll-board .rows .ceil {
   padding: 0 13px;
 }
-/* .row-item {
-  height: 45.6px !important;
-  line-height: 45.6px !important;
-} */
 /deep/ .psv-navbar {
   left: 30px;
   width: 365px;
@@ -717,10 +820,8 @@ export default {
   // width: 20px;
   height: 20px;
 }
-/deep/ .test {
-  backdrop-filter: blur(8px);
-}
 /deep/ .el-dialog {
+  // overflow: hidden;
   position: relative;
   margin: 0 auto 50px;
   border-top-left-radius: 5%;
@@ -742,7 +843,6 @@ export default {
   background-color: rgba(64, 97, 148, 0.534);
   /* background-color: rgba(61, 77, 93, 0.5); */
 }
-
 /deep/ .el-dialog__body {
   /* padding: 30px 20px; */
   color: #606266;
@@ -755,5 +855,29 @@ export default {
   line-height: 24px;
   font-size: 18px;
   color: #fff;
+}
+
+.el-icon-full-screen{
+  position: relative;
+  z-index: 2000;
+}
+.icon{
+  color: #02eefc;
+  width: 16px;
+  height: 16px;
+}
+.large-icon{
+  cursor: pointer;
+  position: absolute;
+  z-index: 100;
+  top: 10px;
+  right: 20px;
+}
+.large-icon-right{
+  cursor: pointer;
+  position: absolute;
+  z-index: 100;
+  top: 10px;
+  left: 20px;
 }
 </style>
